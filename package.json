@@ -1,0 +1,16 @@
+{
+	"name": "discord-bot",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "git@reinhackvancheat:reinhackVancheat/Discord-bot.git",
+	"author": "reinhack <reinhack.code@gmail.com>",
+	"license": "MIT",
+	"type": "module",
+	"dependencies": {
+		"discord.js": "^14.26.4",
+		"dotenv": "^17.4.2"
+	},
+	"scripts": {
+		"start": "yarn node index.js"
+	}
+}
