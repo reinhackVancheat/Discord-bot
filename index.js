@@ -3,8 +3,20 @@ import fs from "node:fs";
 import path from "node:path";
 import { Client, Collection, GatewayIntentBits } from "discord.js";
 import dotenv from "dotenv";
+import e from "express";
 
 dotenv.config();
+
+const app = e();
+const port = process.env.PORT || 4000;
+
+app.get("/", (req, res) => {
+	res.send("Online!");
+});
+
+app.listen(port, () => {
+	console.log(`Listening on port ${port}`);
+});
 
 const client = new Client({
 	intents: [GatewayIntentBits.Guilds],

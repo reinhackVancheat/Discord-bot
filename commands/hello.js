@@ -9,7 +9,6 @@ export const data = new SlashCommandBuilder()
 			.setDescription("Name to say hello to")
 			.setRequired(false),
 	);
-
 export async function execute(interaction) {
 	const name = interaction.options.getString("name");
 	const username = name ? name : interaction.user.globalName;
