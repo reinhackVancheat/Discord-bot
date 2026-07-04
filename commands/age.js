@@ -31,7 +31,7 @@ export async function execute(interaction) {
 		parseInt(date[2], 10),
 	);
 	await interaction.reply(
-		`Your age is ${age.anos} years ${age.meses} months and ${age.dias} days`,
+		`Your age is ${age.years} years ${age.months} months and ${age.days} days`,
 	);
 }
 
@@ -70,6 +70,6 @@ function calculateAge(birthDay, birthMonth, birthYear) {
 	return {
 		years: year - birthYear,
 		monthes: month - birthMonth,
-		days: dia - birthDay,
+		days: day - birthDay,
 	};
 }
