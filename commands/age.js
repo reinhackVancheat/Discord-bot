@@ -69,7 +69,7 @@ function calculateAge(birthDay, birthMonth, birthYear) {
 
 	return {
 		years: year - birthYear,
-		monthes: month - birthMonth,
+		months: month - birthMonth,
 		days: day - birthDay,
 	};
 }
