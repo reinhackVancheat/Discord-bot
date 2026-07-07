@@ -4,9 +4,14 @@ export const data = new SlashCommandBuilder()
 	.setName("fox")
 	.setDescription("random fox image");
 export async function execute(interaction) {
-	const response = await fetch("https://randomfox.ca/floof/");
+	try {
+		const response = await fetch("https://randomfox.ca/floof/");
 
-	const data = await response.json();
+		const data = await response.json();
 
-	await interaction.reply(`${data.image}`);
+		await interaction.reply(`${data.image}`);
+	} catch (error) {
+		console.log(`Command /fox error: ${error}`);
+		await interaction.reply(`Looks like something went wrong`);
+	}
 }
